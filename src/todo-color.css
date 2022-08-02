@@ -1,0 +1,72 @@
+:root{
+  /* https://materialui.co/colors/ */
+--color-vh: #BF360C;
+--color-vh-50: #FBE9E7;
+--color-h: #ff9900;
+--color-h-50: #FFFDE7;
+--color-m: #7ace19;
+--color-m-50: #F9FBE7;
+--color-low: #11a6c0;
+--color-low-50: #E0F7FA;
+--color-vl: #303F9F;
+--color-vl-50: #E8EAF6;
+
+--filter-white: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+}
+
+.todo-container .btn{
+  color: white;
+}
+
+.todo-container .icon{
+  filter: var(--filter-white);
+}
+
+.veryHigh{
+  background-color: var(--color-vh-50);
+  border-top: var(--color-vh) solid 2px;
+}
+
+.veryHigh .todo-check, .veryHigh .btn{
+  background-color: var(--color-vh);
+}
+
+.high{
+  background-color: var(--color-h-50);
+  border-top: var(--color-h) solid 2px;
+}
+
+.high .todo-check, .high .btn{
+  background-color: var(--color-h);
+}
+
+/* .todo-check.checked::before{
+  border-color: black;
+} */
+
+.medium{
+  background-color: var(--color-m-50);
+  border-top: var(--color-m) solid 2px;
+}
+
+.medium .todo-check, .medium .btn{
+  background-color: var(--color-m);
+}
+
+.low{
+  background-color: var(--color-low-50);
+  border-top: var(--color-low) solid 2px;
+}
+
+.low .todo-check, .low .btn{
+  background-color: var(--color-low);
+}
+
+.veryLow{
+  background-color: var(--color-vl-50);
+  border-top: var(--color-vl) solid 2px;
+}
+
+.veryLow .todo-check, .veryLow .btn{
+  background-color: var(--color-vl);
+}

@@ -1,0 +1,477 @@
+:root {
+  /* https://tailwindcss.com/docs/customizing-colors */
+  --color-50: #ecfeff;
+  --color-100: #cffafe;
+  --color-200: #a5f3fc;
+  --color-300: #67e8f9;
+  --color-400: #22d3ee;
+  --color-500: #06b6d4;
+}
+
+body {
+  background-color: var(--color-50);
+}
+
+.hide-scroll {
+  overflow-y: hidden;
+}
+
+body * {
+  font-size: 1rem;
+}
+
+button {
+  word-break: break-word;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding-left: 5px;
+  background-color: var(--color-200);
+  z-index: 1;
+  transition: 0.3s;
+  height: 35px;
+}
+
+header.hide {
+  top: -50px;
+}
+
+.menu-btn {
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-btn.change {
+  transform: rotate(90deg);
+  transition: 0.4s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 5px;
+  margin: 5px 0;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-50deg) translate(-6px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(50deg) translate(-8px, -8px);
+}
+
+
+.head-title {
+  padding: 3px;
+}
+
+.new-todo.btn {
+  margin-left: auto;
+  border: 1px solid var(--color-400);
+  border-radius: 5px;
+}
+
+.menu-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  left: -100%;
+  transition: 0.1s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  bottom: 0;
+  top: 35px;
+  z-index: 1;
+  background-color: var(--color-100);
+}
+
+.menu-nav.active {
+  left: 0;
+}
+
+.all-projects-menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 11px;
+}
+
+.create-project-btn {
+  margin-left: auto;
+}
+
+.project-group-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-container {
+  display: flex;
+  width: 100%;
+}
+
+.project-container .btn {
+  width: 100%;
+}
+
+.icon-btn,
+.icon {
+  padding: 4px;
+}
+
+.icon-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btn {
+  background-color: var(--color-200);
+  border: none;
+  box-sizing: border-box;
+  min-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: var(--color-300);
+}
+
+button,
+.todo-title-container,
+.collapsible-container {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: var(--color-100);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 5px var(--color-400) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-400);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-500);
+}
+
+.project-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.input-container {
+  display: grid;
+  background-color: var(--color-200);
+}
+
+.input-container label {
+  padding: 5px;
+}
+
+.input-container input {
+  min-height: 2rem;
+}
+
+.error-message {
+  padding: 5px;
+  background-color: #db0202;
+  color: white;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+
+.btn-container .btn {
+  width: 100%;
+}
+
+.cancel-btn,
+.cancel-edit.btn,
+.confirm-delete.btn {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.cancel-btn:hover,
+.cancel-edit.btn:hover,
+.confirm-delete.btn:hover {
+  background-color: #df0000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+
+.todo-title-container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.todo-check {
+  min-height: 2rem;
+  width: 40px;
+  position: relative;
+}
+
+.todo-check.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 20%;
+  left: 40%;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  min-width: 0;
+}
+
+.todo-check.checked+.todo-title .todo-title-string {
+  text-decoration: line-through;
+}
+
+.todo-title-string {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-height: 1.1rem;
+}
+
+.todo-due-date {
+  margin-left: auto;
+  color: #6e6e6e;
+  font-size: 0.82rem;
+}
+
+.todo-content {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.todo-content> :first-child {
+  margin-top: 10px;
+}
+
+.todo-detail-container {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.todo-detail-container> :last-child {
+  word-break: break-word;
+}
+
+.todo-detail-label {
+  font-weight: bold;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  content: "";
+  position: fixed;
+  overflow-y: auto;
+  background-color: #00000096;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-content {
+  display: flex;
+  justify-items: center;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  justify-content: center;
+  min-height: 50px;
+  background-color: var(--color-100);
+  gap: 17px;
+}
+
+.modal-form {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+
+.modal-form textarea {
+  max-width: 100vw;
+}
+
+#todo-project-input,
+#todo-priority-input {
+  caret-color: transparent;
+}
+
+.options-container {
+  position: absolute;
+  display: none;
+  background-color: var(--color-50);
+  width: 100%;
+}
+
+.collapsible-container.active .options-container {
+  display: initial;
+}
+
+.drop-option {
+  min-height: 1.5rem;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid var(--color-200);
+}
+
+.drop-option:hover {
+  background-color: var(--color-100);
+}
+
+.callout {
+  position: fixed;
+  bottom: -200px;
+  left: 10px;
+  right: 10px;
+  transition: 1s;
+  border: solid 1px var(--color-500);
+  display: flex;
+  align-items: center;
+  background-color: var(--color-100);
+  font-weight: bold;
+  z-index: 2;
+}
+
+.callout-message {
+  margin-right: auto;
+}
+
+.callout.active {
+  bottom: 10px;
+}
+
+@media (min-width: 700px) {
+  .hide-scroll {
+    overflow-y: unset;
+  }
+
+  header.hide {
+    top: 0;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-nav {
+    width: 250px;
+    left: 0;
+  }
+
+  .menu-nav.active {
+    left: unset;
+  }
+
+  .modal {
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  .btn-container {
+    flex-direction: row;
+    padding: 5px 25px;
+  }
+
+  main {
+    margin-left: 250px;
+  }
+
+  .todo-content{
+    padding: 5px;
+  }
+
+  .todo-content .btn:hover{
+    transform: scale(1.1);
+    outline: 1px solid white;
+  }
+
+  .modal-form{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal-form > :last-child{
+    grid-column: 1/-1;
+  }
+
+  .options-container{
+    width: calc(50% - 5px);
+  }
+
+  .callout{
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu-nav{
+    width: 25vw;
+  }
+
+  main{
+    margin-left: 25vw;
+    padding: 40px;
+  }
+}
+
+/* https://www.w3schools.com/howto/howto_css_menu_icon.asp
+https://www.w3schools.com/howto/howto_js_collapse_sidepanel.asp
+https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+*/
