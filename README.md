@@ -1,7 +1,7 @@
 # The Odin Project
 ## Project: Restaurant Page.
 This is a To-Do List from The Odin Project [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-todo-list).
-### [Live preview](https://dantenebris.github.io/Todo-list/).
+### [Live preview](https://dantenebris.github.io/Project-Todo-List/).
 ### Outcome of this project:
 - Learned how to implement event handlers on  **dynamically generated** DOM elements.
 - Deepened knowledge of **DOM manipulation**, **CSS styling** and **JS functionality** in general.
