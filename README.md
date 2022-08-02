@@ -1,5 +1,5 @@
 # The Odin Project
-## Project: Restaurant Page.
+## Project: Todo List.
 This is a To-Do List from The Odin Project [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-todo-list).
 ### [Live preview](https://dantenebris.github.io/Project-Todo-List/).
 ### Outcome of this project:
